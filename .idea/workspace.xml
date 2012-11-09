@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="739fcd94-116a-4daf-b725-e7071fc46fa6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Clock.js" afterPath="$PROJECT_DIR$/src/Clock.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/testrunner.html" afterPath="$PROJECT_DIR$/test/testrunner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Clock.test.js" afterPath="$PROJECT_DIR$/test/Clock.test.js" />
     </list>
     <ignored path="time.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testrunner.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="testrunner.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/testrunner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="48" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.36643025">
+            <state line="31" column="48" selection-start="1057" selection-end="1057" vertical-scroll-proportion="-19.375">
               <folding />
             </state>
           </provider>
@@ -60,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Clock.test.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Clock.test.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Clock.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+            <state line="17" column="56" selection-start="462" selection-end="462" vertical-scroll-proportion="0.19721578">
               <folding />
             </state>
           </provider>
@@ -85,9 +84,9 @@
         <option value="$PROJECT_DIR$/test/testrunner.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/test/time.test.js" />
-        <option value="$PROJECT_DIR$/test/Clock.test.js" />
         <option value="$PROJECT_DIR$/src/Clock.js" />
         <option value="$PROJECT_DIR$/test/testrunner.html" />
+        <option value="$PROJECT_DIR$/test/Clock.test.js" />
       </list>
     </option>
   </component>
@@ -281,23 +280,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/testrunner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="0" selection-start="6842" selection-end="6842" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Clock.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -311,7 +296,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/testrunner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="48" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.36643025">
+        <state line="31" column="48" selection-start="1057" selection-end="1057" vertical-scroll-proportion="-19.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/testrunner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="0" selection-start="6842" selection-end="6842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Clock.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="56" selection-start="462" selection-end="462" vertical-scroll-proportion="0.19721578">
           <folding />
         </state>
       </provider>
