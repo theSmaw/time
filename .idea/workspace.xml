@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="739fcd94-116a-4daf-b725-e7071fc46fa6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/testrunner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/testrunner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/time.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/time.test.js" afterPath="$PROJECT_DIR$/test/time.test.js" />
     </list>
     <ignored path="time.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +23,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.05800464">
+            <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -54,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="time.test.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="time.test.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/time.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="34" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.06960557">
               <folding />
             </state>
           </provider>
@@ -78,8 +74,8 @@
       <list>
         <option value="$PROJECT_DIR$/test/testrunner.js" />
         <option value="$PROJECT_DIR$/test/testrunner.html" />
-        <option value="$PROJECT_DIR$/test/time.test.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/test/time.test.js" />
       </list>
     </option>
   </component>
@@ -245,13 +241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/time.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="34" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/testrunner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="18" selection-start="1271" selection-end="1271" vertical-scroll-proportion="-23.75">
@@ -261,7 +250,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.05800464">
+        <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/time.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.06960557">
           <folding />
         </state>
       </provider>
