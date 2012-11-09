@@ -17,6 +17,13 @@ describe('Clock', function () {
             it('should have a tell the time method', function () {
                 expect(clock.tellTheTime).toBeDefined();
             });
+
+            it('should return a string', function () {
+                var str;
+
+                str = clock.tellTheTime();
+                expect(typeof(str)).toBe('string');
+            });
         });
     });
 });
