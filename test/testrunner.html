@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Jasmine Test Runner</title>
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-1.2.0/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.2.0/jasmine.css">
+  <script type="text/javascript" src="lib/jasmine-1.2.0/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine-1.2.0/jasmine-html.js"></script>
+  <script type="text/javascript" src="lib/jasmine.junit_reporter.js"></script>
+
+  <!-- include library files here... -->
+  <script type="text/javascript" src="../src/lib/jquery.js"></script>
+
+
+  <!-- include source files here... -->
+  <script src="../src/time.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="time.test.js"></script>
+
+  <script type="text/javascript">
+    (function () {
+      var currentWindowOnload = window.onload,
+          jasmineEnv = jasmine.getEnv(),
+          reporter;
+
+      jasmineEnv.updateInterval = 1000;
+
+      // allows tests to be run locally in a browser
+      if (window.location.search === '?pretty') {
+        reporter = new jasmine.HtmlReporter();
+        jasmineEnv.addReporter(reporter);
+
+        jasmineEnv.specFilter = function(spec) {
+
+          return reporter.specFilter(spec);
+        };
+
+      // run in CI
+      } else {
+        reporter = new jasmine.TrivialReporter();
+        jasmineEnv.addReporter(reporter);
+        jasmineEnv.addReporter(new jasmine.JUnitXmlReporter());
+      }
+
+      window.onload = function () {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        jasmineEnv.execute();
+      };
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>

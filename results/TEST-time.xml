@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="time" errors="0" tests="1" failures="1" time="0.004" timestamp="2012-11-09T17:09:28">
+  <testcase classname="time" name="should fail" time="0.004"><failure type="expect" message="Expected false to be truthy.">Expected false to be truthy.</failure></testcase>
+</testsuite>
+</testsuites>
