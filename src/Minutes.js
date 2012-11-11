@@ -1,5 +1,18 @@
 function Minutes () {
-    this.prefixesList = ['just after'];
+    this.prefixesList = [
+        'just after',
+        'five past',
+        'ten past',
+        'a quarter past',
+        'twenty past',
+        'twenty-five minutes past',
+        'half past',
+        'twenty-five minutes to',
+        'twenty to',
+        'a quarter to',
+        'ten to',
+        'five to'
+    ];
 }
 
 Minutes.prototype.convert = function (rawMinutes) {
@@ -9,16 +22,14 @@ Minutes.prototype.convert = function (rawMinutes) {
         };
     
     if (rawMinutes > 0) {    
-        if (rawMinutes < 32) {
-            convertedMinutes.prefix = this.createPrefix(rawMinutes);
-        }
+        convertedMinutes.prefix = this.createPrefix(rawMinutes);
     }
     
     return convertedMinutes;
 };
 
 Minutes.prototype.createPrefix = function (rawMinutes) {
-    var prefixListPosition = Math.round(rawMinutes / 5) / 5;
+    var prefixListPosition = Math.round(rawMinutes / 5);
     
     return this.prefixesList[prefixListPosition];
 }
