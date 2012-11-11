@@ -1,5 +1,6 @@
 function Clock () {
     this.hours = {
+        '0' : 'midnight',
         '1' : 'one',
         '2' : 'two',
         '3' : 'three',
@@ -29,7 +30,7 @@ function Clock () {
 Clock.prototype.createSuffix = function (time) {
     var suffix = '';
     
-    if (time.hours !== 'noon') {
+    if ((time.hours !== 'noon') && (time.hours !== 'midnight')) {
         suffix = ' o\'clock';
     }
     
