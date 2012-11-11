@@ -17,8 +17,9 @@ describe('Minutes', function () {
         });
         
         it('should return "o\'clock" as a suffix if there are no minutes', function () {
-            minutes.convert(0);
-            expect(minutes.suffix).toBe(' o\'clock');
+            var convertedMinutes = minutes.convert(0);
+            
+            expect(convertedMinutes.suffix).toBe(' o\'clock');
         });
     });
 });
