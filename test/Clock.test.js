@@ -107,6 +107,12 @@ describe('Clock', function () {
                 time = clock.tellTheTime(rawTime);
                 expect(time).toBe('eleven o\'clock');
             });
+            
+            it('should return "midnight" if it is midnight', function () {                
+                rawTime.setHours(0, 0, 0, 0);                
+                time = clock.tellTheTime(rawTime);
+                expect(time).toBe('midnight');
+            });
         });
     });
 });
