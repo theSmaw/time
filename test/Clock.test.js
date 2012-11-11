@@ -63,6 +63,12 @@ describe('Clock', function () {
                 time = clock.tellTheTime(rawTime);
                 expect(time).toBe('eleven o\'clock');
             });
+            
+            it('should return "noon" if it is noon', function () {
+                rawTime.setHours(12, 0, 0, 0);                
+                time = clock.tellTheTime(rawTime);
+                expect(time).toBe('noon');
+            });
         });
     });
 });
