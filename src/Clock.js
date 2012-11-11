@@ -10,18 +10,23 @@ function Clock () {
         '8' : 'eight',
         '9' : 'nine',
         '10' : 'ten',
-        '11' : 'eleven'
-        
+        '11' : 'eleven',
+        '12' : 'noon'
     }
 }
 
 Clock.prototype.tellHours = function (rawTime) {
-    var hours,
-        rawHours = rawTime.getHours();
+    var hour,
+        rawHours = rawTime.getHours(),
+        suffix = '';
+        debugger
     
-    hours = parseInt(rawHours, 10).toString();
+    hour = this.hours[parseInt(rawHours, 10)];
+    if (hour !== 'noon') {
+        suffix = ' o\'clock';
+    }
     
-    return this.hours[hours] + ' o\'clock';
+    return hour + suffix;
 }
 
 Clock.prototype.tellTheTime = function (rawTime) {

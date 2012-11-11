@@ -65,6 +65,9 @@ describe('Clock', function () {
             });
             
             it('should return "noon" if it is noon', function () {
+                var rawTime = new Date(),
+                    time;
+                
                 rawTime.setHours(12, 0, 0, 0);                
                 time = clock.tellTheTime(rawTime);
                 expect(time).toBe('noon');
