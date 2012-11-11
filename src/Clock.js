@@ -20,5 +20,5 @@ Clock.prototype.convert = function (rawTime) {
         convertedMinutes = this.convertMinutes(rawTime);
         
 
-    return convertedMinutes.prefix + convertedHours + convertedMinutes.suffix;
+    return convertedMinutes + convertedHours;
 };

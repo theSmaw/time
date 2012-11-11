@@ -1,5 +1,19 @@
 function Hours () {
-    this.hoursList = ['midnight', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'noon'];
+    this.hoursList = [
+        'midnight',
+        'one',
+        'two',
+        'three',
+        'four',
+        'five',
+        'six',
+        'seven',
+        'eight',
+        'nine',
+        'ten',
+        'eleven',
+        'noon'
+    ];
 }
 
 Hours.prototype.convert = function (rawHours) {
