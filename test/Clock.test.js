@@ -26,9 +26,15 @@ describe('Clock', function () {
             });
             
             it('should return the minutes prefix and hour if it is not noon or midnight', function () {                    
-                rawTime.setHours(1, 0, 0, 0);
+                rawTime.setHours(1, 1, 0, 0);
                 convertedTime = clock.convert(rawTime);
                 expect(convertedTime).toBe('prefix one');
+            });
+            
+            it('should add an "o\'clock" suffix if there are no minutes and it is not midnight or noon', function () {
+                rawTime.setHours(1, 0, 0, 0);
+                convertedTime = clock.convert(rawTime);
+                expect(convertedTime).toBe('prefix one o\'clock');
             });
             
             it('should return "noon" if it is noon', function () {                

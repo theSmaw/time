@@ -16,15 +16,16 @@ Clock.prototype.advanceRawHours = function (rawHours) {
 
 Clock.prototype.convert = function (rawTime) {
     var convertedHours,
-        convertedMinutes,
+        prefix,
         rawHours = rawTime.getHours(),
-        rawMinutes = rawTime.getMinutes();
+        rawMinutes = rawTime.getMinutes(),
+        suffix;
         
         if (rawMinutes > 32) {
             rawHours = this.advanceRawHours(rawHours);
         }
         convertedHours = this.hours.convert(rawHours);
-        convertedMinutes = this.minutes.convert(rawMinutes);
+        prefix = this.minutes.convert(rawMinutes);
 
-    return convertedMinutes + convertedHours;
+    return prefix + convertedHours;
 };
