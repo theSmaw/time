@@ -25,22 +25,34 @@ describe('Clock', function () {
                 rawTime = new Date()
             });
             
-            it('should return the hour if it is not noon or midnight', function () {                    
+            it('should return the minutes prefix and hour if it is not noon or midnight', function () {                    
                 rawTime.setHours(1, 0, 0, 0);
                 convertedTime = clock.convert(rawTime);
-                expect(convertedTime).toBe('one');
+                expect(convertedTime).toBe('prefix one');
             });
             
             it('should return "noon" if it is noon', function () {                
                 rawTime.setHours(12, 0, 0, 0);                
                 convertedTime = clock.convert(rawTime);
-                expect(convertedTime).toBe('noon');
+                expect(convertedTime).toBe('prefix noon');
             });
             
             it('should return "midnight" if it is midnight', function () {                
                 rawTime.setHours(0, 0, 0, 0);                
                 convertedTime = clock.convert(rawTime);
-                expect(convertedTime).toBe('midnight');
+                expect(convertedTime).toBe('prefix midnight');
+            });
+            
+            it('should increment the returned hour if the time is closer than 28 minutes to it', function () {
+                rawTime.setHours(0, 33, 0, 0);
+                convertedTime = clock.convert(rawTime);
+                expect(convertedTime).toBe('prefix one');
+                rawTime.setHours(1, 33, 0, 0);
+                convertedTime = clock.convert(rawTime);
+                expect(convertedTime).toBe('prefix two');
+                rawTime.setHours(23, 33, 0, 0);
+                convertedTime = clock.convert(rawTime);
+                expect(convertedTime).toBe('prefix midnight'); 
             });
         });
     });

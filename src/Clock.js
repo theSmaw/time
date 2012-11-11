@@ -3,22 +3,28 @@ function Clock (Hours, Minutes) {
     this.minutes = new Minutes();
 }
 
-Clock.prototype.convertHours = function (rawTime) {
-    var rawHours = rawTime.getHours();
+Clock.prototype.advanceRawHours = function (rawHours) {
+    var advancedRawHours;
     
-    return this.hours.convert(rawHours);
-};
-
-Clock.prototype.convertMinutes = function (rawTime) {
-    var rawMinutes = rawTime.getMinutes();
+    advancedRawHours = rawHours += 1;
+    if (advancedRawHours === 24) {
+        advancedRawHours = 0;
+    }
     
-    return this.minutes.convert(rawMinutes);
+    return advancedRawHours;
 };
 
 Clock.prototype.convert = function (rawTime) {
-    var convertedHours = this.convertHours(rawTime),
-        convertedMinutes = this.convertMinutes(rawTime);
+    var convertedHours,
+        convertedMinutes,
+        rawHours = rawTime.getHours(),
+        rawMinutes = rawTime.getMinutes();
         
+        if (rawMinutes > 32) {
+            rawHours = this.advanceRawHours(rawHours);
+        }
+        convertedHours = this.hours.convert(rawHours);
+        convertedMinutes = this.minutes.convert(rawMinutes);
 
     return convertedMinutes + convertedHours;
 };

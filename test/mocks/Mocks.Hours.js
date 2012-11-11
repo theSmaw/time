@@ -7,6 +7,8 @@ Mocks.Hours.prototype.convert = function (rawHours) {
     
     if (rawHours === 1) {
         convertedHours = 'one';
+    } else if (rawHours === 2) {
+        convertedHours = 'two';
     } else if (rawHours === 12) {
         convertedHours = 'noon';
     } else if (rawHours === 0) {
