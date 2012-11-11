@@ -1,23 +1,24 @@
-function Clock (Hours) {
+function Clock (Hours, Minutes) {
     this.hours = new Hours();
+    this.minutes = new Minutes();
 }
 
-Clock.prototype.createSuffix = function (time) {
-    var suffix = '';
+Clock.prototype.convertHours = function (rawTime) {
+    var rawHours = rawTime.getHours();
     
-    if ((time.hours !== 'noon') && (time.hours !== 'midnight')) {
-        suffix = ' o\'clock';
-    }
+    return this.hours.convert(rawHours);
+};
+
+Clock.prototype.convertMinutes = function (rawTime) {
+    var rawMinutes = rawTime.getMinutes();
     
-    return suffix;
+    return this.minutes.convert(rawMinutes);
 };
 
 Clock.prototype.convert = function (rawTime) {
-    var time = {};
-    
-    if (rawTime && typeof(rawTime.getHours) === 'function') {
-        time.hours = this.hours.convert(rawTime.getHours());
-    }
+    var convertedHours = this.convertHours(rawTime),
+        convertedMinutes = this.convertMinutes(rawTime);
+        
 
-    return time.hours + this.createSuffix(time);
+    return convertedMinutes.prefix + convertedHours + convertedMinutes.suffix;
 };

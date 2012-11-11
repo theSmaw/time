@@ -16,10 +16,11 @@ describe('Minutes', function () {
             expect(minutes.convert).toBeDefined();
         });
         
-        it('should return "o\'clock" as a suffix if there are no minutes', function () {
+        it('should return no prefix or suffix if there are no minutes', function () {
             var convertedMinutes = minutes.convert(0);
             
-            expect(convertedMinutes.suffix).toBe(' o\'clock');
+            expect(convertedMinutes.prefix).toBe('');
+            expect(convertedMinutes.suffix).toBe('');
         });
     });
 });

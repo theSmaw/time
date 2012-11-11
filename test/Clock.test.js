@@ -2,7 +2,7 @@ describe('Clock', function () {
     var clock;
 
     function before () {
-        clock = new Clock(Mocks.Hours);
+        clock = new Clock(Mocks.Hours, Mocks.Minutes);
     }
 
     it('should be a function', function () {
@@ -24,16 +24,11 @@ describe('Clock', function () {
                 before();
                 rawTime = new Date()
             });
-
-            it('should return a string', function () {
-                convertedTime = clock.convert(rawTime);
-                expect(typeof(convertedTime)).toBe('string');
-            });
             
-            it('should return only the hour with the " o\'clock" suffix if it is not noon or midnight', function () {                    
+            it('should return the hour if it is not noon or midnight', function () {                    
                 rawTime.setHours(1, 0, 0, 0);
                 convertedTime = clock.convert(rawTime);
-                expect(convertedTime).toBe('one o\'clock');
+                expect(convertedTime).toBe('one');
             });
             
             it('should return "noon" if it is noon', function () {                
