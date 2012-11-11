@@ -24,13 +24,12 @@ describe('Minutes', function () {
         });
         
         it('should return a "just after" prefix if it is 2 or less minutes past the hour', function () {
-            var convertedMinutes = minutes.convert(0);
-            
-            expect(convertedMinutes.prefix).toBe('just after');
-            convertedMinutes = minutes.convert(1);
+            var convertedMinutes = minutes.convert(1);
+
             expect(convertedMinutes.prefix).toBe('just after');
             convertedMinutes = minutes.convert(2);
             expect(convertedMinutes.prefix).toBe('just after');
+            convertedMinutes = minutes.convert(2);
         });
     });
 });
