@@ -11,7 +11,8 @@ function Minutes () {
         'twenty to',
         'a quarter to',
         'ten to',
-        'five to'
+        'five to',
+        'just before'
     ];
 }
 
