@@ -31,5 +31,55 @@ describe('Minutes', function () {
             expect(convertedMinutes.prefix).toBe('just after');
             convertedMinutes = minutes.convert(2);
         });
+        
+        it('should return a prefix rounded to the nearest 5 minutes for all times up to 3 minues before the next hour', function () {
+            var convertedMinutes,
+                i;
+            
+            for (i = 3; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('five past');
+            }
+            for (i = 8; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('ten past');
+            }
+            for (i = 13; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('a quarter past');
+            }
+            for (i = 18; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('twenty past');
+            }
+            for (i = 23; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('twenty-five minutes past');
+            }
+            for (i = 28; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('half past');
+            }
+            for (i = 33; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('twenty-five minutes to');
+            }
+            for (i = 38; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('twenty two');
+            }
+            for (i = 43; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('a quarter to');
+            }
+            for (i = 48; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('ten to');
+            }
+            for (i = 53; i < 8; i += 1) {
+                convertedMinutes = minutes.convert(i);
+                expect(convertedMinutes.prefix).toBe('five to');
+            }
+        });
     });
 });
