@@ -12,23 +12,25 @@ describe('Clock', function () {
     describe('instance of clock', function () {
         beforeEach(before);
 
-        describe('telling the time', function () {
+        it('should have a tell the time method', function () {
+            expect(clock.tellTheTime).toBeDefined();
+        });
 
-            it('should have a tell the time method', function () {
-                expect(clock.tellTheTime).toBeDefined();
+        describe('telling the time', function () {
+            var rawTime,
+                time;
+            
+            beforeEach(function () {
+                before();
+                rawTime = new Date()
             });
 
             it('should return a string', function () {
-                var time;
-
-                time = clock.tellTheTime();
+                time = clock.tellTheTime(rawTime);
                 expect(typeof(time)).toBe('string');
             });
             
-            it('should return the hour only if there are no minutes and it is AM', function () {
-                var rawTime = new Date(),
-                    time;
-                    
+            it('should return only the hour if there are no minutes and it is AM', function () {                    
                 rawTime.setHours(1, 0, 0, 0);                
                 time = clock.tellTheTime(rawTime);
                 expect(time).toBe('one o\'clock');
@@ -64,10 +66,7 @@ describe('Clock', function () {
                 expect(time).toBe('eleven o\'clock');
             });
             
-            it('should return "noon" if it is noon', function () {
-                var rawTime = new Date(),
-                    time;
-                
+            it('should return "noon" if it is noon', function () {                
                 rawTime.setHours(12, 0, 0, 0);                
                 time = clock.tellTheTime(rawTime);
                 expect(time).toBe('noon');
