@@ -19,13 +19,16 @@ Clock.prototype.convert = function (rawTime) {
         prefix,
         rawHours = rawTime.getHours(),
         rawMinutes = rawTime.getMinutes(),
-        suffix;
+        suffix = '';
         
         if (rawMinutes > 32) {
             rawHours = this.advanceRawHours(rawHours);
         }
         convertedHours = this.hours.convert(rawHours);
         prefix = this.minutes.convert(rawMinutes);
+        if ((rawMinutes === 0) && convertedHours !== 'noon' && convertedHours !== 'midnight') {
+            suffix = ' o\'clock';
+        }
 
-    return prefix + convertedHours;
+    return prefix + convertedHours + suffix;
 };
