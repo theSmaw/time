@@ -9,7 +9,7 @@ describe('Hours', function () {
        expect(typeof(Hours)).toBe('function');
     });
 
-    describe('instance of hours', function () {
+    describe('instance of Hours', function () {
         beforeEach(before);
 
         it('should have a convert method', function () {
