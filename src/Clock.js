@@ -11,30 +11,47 @@ function Clock () {
         '9' : 'nine',
         '10' : 'ten',
         '11' : 'eleven',
-        '12' : 'noon'
+        '12' : 'noon',
+        '13' : 'one',
+        '14' : 'two',
+        '15' : 'three',
+        '16' : 'four',
+        '17' : 'five',
+        '18' : 'six',
+        '19' : 'seven',
+        '20' : 'eight',
+        '21' : 'nine',
+        '22' : 'ten',
+        '23' : 'eleven'
     }
 }
 
-Clock.prototype.tellHours = function (rawTime) {
-    var hour,
-        rawHours = rawTime.getHours(),
-        suffix = '';
-        debugger
+Clock.prototype.createSuffix = function (time) {
+    var suffix = '';
     
-    hour = this.hours[parseInt(rawHours, 10)];
-    if (hour !== 'noon') {
+    if (time.hours !== 'noon') {
         suffix = ' o\'clock';
     }
     
-    return hour + suffix;
-}
+    return suffix;
+};
+
+Clock.prototype.tellHours = function (rawTime) {
+    var hours,
+        rawHours = rawTime.getHours(),
+        suffix = '';
+    
+    hours = this.hours[parseInt(rawHours, 10)];
+    
+    return hours;
+};
 
 Clock.prototype.tellTheTime = function (rawTime) {
-    var hours = '';
+    var time = {};
     
     if (rawTime && typeof(rawTime.getHours) === 'function') {
-        hours = this.tellHours(rawTime);
+        time.hours = this.tellHours(rawTime);
     }
 
-    return hours;
+    return time.hours + this.createSuffix(time);
 };
