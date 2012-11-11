@@ -15,20 +15,39 @@ Clock.prototype.advanceRawHours = function (rawHours) {
 };
 
 Clock.prototype.convert = function (rawTime) {
-    var convertedHours,
-        prefix,
+    var prefix,
         rawHours = rawTime.getHours(),
         rawMinutes = rawTime.getMinutes(),
-        suffix = '';
-        
-        if (rawMinutes > 32) {
-            rawHours = this.advanceRawHours(rawHours);
-        }
-        convertedHours = this.hours.convert(rawHours);
-        prefix = this.minutes.convert(rawMinutes);
-        if ((rawMinutes === 0) && convertedHours !== 'noon' && convertedHours !== 'midnight') {
-            suffix = ' o\'clock';
-        }
+        suffix;
+
+    prefix = this.createPrefix(rawMinutes);
+    convertedHours = this.convertHours(rawHours, rawMinutes);
+    suffix = this.createSuffix(convertedHours, rawMinutes);
 
     return prefix + convertedHours + suffix;
+};
+
+Clock.prototype.convertHours = function (rawHours, rawMinutes) {
+    var hoursToConvert = rawHours;
+    
+    if (rawMinutes > 32) {
+        hoursToConvert = this.advanceRawHours(hoursToConvert);
+    }
+    
+    return this.hours.convert(hoursToConvert);
+};
+
+Clock.prototype.createPrefix = function (rawMinutes) {
+    
+    return this.minutes.convert(rawMinutes);
+};
+
+Clock.prototype.createSuffix = function (convertedHours, rawMinutes) {
+    var suffix = '';
+    
+    if ((rawMinutes === 0) && (convertedHours !== 'noon') && (convertedHours !== 'midnight')) {
+        suffix = ' o\'clock';
+    }
+    
+    return suffix;
 };
