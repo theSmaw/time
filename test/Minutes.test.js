@@ -15,5 +15,10 @@ describe('Minutes', function () {
         it('should have a convert method', function () {
             expect(minutes.convert).toBeDefined();
         });
+        
+        it('should return "o\'clock" as a suffix if there are no minutes', function () {
+            minutes.convert(0);
+            expect(minutes.suffix).toBe(' o\'clock');
+        });
     });
 });
