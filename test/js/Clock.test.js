@@ -2,7 +2,7 @@ describe('Clock', function () {
     var clock;
 
     function before () {
-        clock = new Clock(Mocks.Hours, Mocks.Minutes);
+        clock = new Clock(Mocks.Hour, Mocks.Minutes);
     }
 
     it('should be a function', function () {
@@ -38,13 +38,13 @@ describe('Clock', function () {
             });
             
             it('should return "noon" if it is noon', function () {                
-                rawTime.setHours(12, 0, 0, 0);                
+                rawTime.setHours(12, 0, 0, 0);
                 convertedTime = clock.convert(rawTime);
                 expect(convertedTime).toBe('prefix noon');
             });
             
             it('should return "midnight" if it is midnight', function () {                
-                rawTime.setHours(0, 0, 0, 0);                
+                rawTime.setHours(0, 0, 0, 0);
                 convertedTime = clock.convert(rawTime);
                 expect(convertedTime).toBe('prefix midnight');
             });

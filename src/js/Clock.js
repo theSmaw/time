@@ -1,17 +1,17 @@
-function Clock (Hours, Minutes) {
-    this.hours = new Hours();
+function Clock (Hour, Minutes) {
+    this.hour = new Hour();
     this.minutes = new Minutes();
 }
 
-Clock.prototype.advanceRawHours = function (rawHours) {
-    var advancedRawHours;
+Clock.prototype.advanceRawHour = function (rawHour) {
+    var advancedRawHour;
     
-    advancedRawHours = rawHours += 1;
-    if (advancedRawHours === 24) {
-        advancedRawHours = 0;
+    advancedRawHour = rawHour + 1;
+    if (advancedRawHour === 24) {
+        advancedRawHour = 0;
     }
     
-    return advancedRawHours;
+    return advancedRawHour;
 };
 
 /**
@@ -19,29 +19,30 @@ Clock.prototype.advanceRawHours = function (rawHours) {
  *
  * @public
  * @param {Date} rawTime
- * @return {string} Converted date
+ * @return {string} Converted dat
  */
 Clock.prototype.convert = function (rawTime) {
-    var prefix,
-        rawHours = rawTime.getHours(),
+    var convertedHour,
+        prefix,
+        rawHour = rawTime.getHours(),
         rawMinutes = rawTime.getMinutes(),
         suffix;
 
     prefix = this.createPrefix(rawMinutes);
-    convertedHours = this.convertHours(rawHours, rawMinutes);
-    suffix = this.createSuffix(convertedHours, rawMinutes);
+    convertedHour = this.convertHour(rawHour, rawMinutes);
+    suffix = this.createSuffix(convertedHour, rawMinutes);
 
-    return prefix + convertedHours + suffix;
+    return prefix + convertedHour + suffix;
 };
 
-Clock.prototype.convertHours = function (rawHours, rawMinutes) {
-    var hoursToConvert = rawHours;
+Clock.prototype.convertHour = function (rawHour, rawMinutes) {
+    var hourToConvert = rawHour;
     
     if (rawMinutes > 32) {
-        hoursToConvert = this.advanceRawHours(hoursToConvert);
+        hourToConvert = this.advanceRawHour(hourToConvert);
     }
     
-    return this.hours.convert(hoursToConvert);
+    return this.hour.convert(hourToConvert);
 };
 
 Clock.prototype.createPrefix = function (rawMinutes) {
@@ -49,10 +50,10 @@ Clock.prototype.createPrefix = function (rawMinutes) {
     return this.minutes.convert(rawMinutes);
 };
 
-Clock.prototype.createSuffix = function (convertedHours, rawMinutes) {
+Clock.prototype.createSuffix = function (convertedHour, rawMinutes) {
     var suffix = '';
     
-    if ((rawMinutes === 0) && (convertedHours !== 'noon') && (convertedHours !== 'midnight')) {
+    if ((rawMinutes === 0) && (convertedHour !== 'noon') && (convertedHour !== 'midnight')) {
         suffix = ' o\'clock';
     }
     

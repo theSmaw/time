@@ -1,19 +1,19 @@
 var Mocks = Mocks || {};
 
-Mocks.Hours = function () {}
+Mocks.Hour = function () {}
 
-Mocks.Hours.prototype.convert = function (rawHours) {
-    var convertedHours;
+Mocks.Hour.prototype.convert = function (rawHour) {
+    var convertedHour;
     
-    if (rawHours === 1) {
-        convertedHours = 'one';
-    } else if (rawHours === 2) {
-        convertedHours = 'two';
-    } else if (rawHours === 12) {
-        convertedHours = 'noon';
-    } else if (rawHours === 0) {
-        convertedHours = 'midnight';
+    if (rawHour === 1) {
+        convertedHour = 'one';
+    } else if (rawHour === 2) {
+        convertedHour = 'two';
+    } else if (rawHour === 12) {
+        convertedHour = 'noon';
+    } else if (rawHour === 0) {
+        convertedHour = 'midnight';
     }
     
-    return convertedHours;
+    return convertedHour;
 }
