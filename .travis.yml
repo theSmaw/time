@@ -1,5 +1,12 @@
 language: node_js
 node_js:
   - 0.8
-  - 0.6
-script: phantomjs test/testrunner.js test/testrunner.html
+before_script:
+  - git clone -q git://github.com/n1k0/casperjs.git
+  - cd casperjs; git checkout -q tags/1.0.0-RC2; cd ../
+  # casper -version exits with non-0 status code, so use || true
+  - ./casperjs/bin/casperjs --version || true
+  - export PATH=$PATH:`pwd`/casperjs/bin
+script:
+  - phantomjs test/js/testrunner.js test/js/testrunner.html
+  - casperjs spec/index.spec.js src/index.html
