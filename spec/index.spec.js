@@ -20,6 +20,10 @@ casper.then(function () {
     this.test.assert(this.exists('#minutes'), 'should have a minutes field');
 });
 
+casper.then(function () {
+    this.test.assert(this.exists('#submit'), 'should have a submit button');
+});
+
 casper.run(function () {
     this.test.renderResults(true, 0, 'results/SPEC-index.xml');
 });
