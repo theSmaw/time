@@ -16,6 +16,12 @@ function Minutes () {
     ];
 }
 
+/**
+ * Creates a conversational prefix from a raw minutes value.
+ *
+ * @param {number} rawMinutes Minutes value as a number
+ * @return {string} Conversational prefix
+ */
 Minutes.prototype.convert = function (rawMinutes) {
     var prefixListPosition;
     

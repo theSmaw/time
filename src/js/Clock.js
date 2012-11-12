@@ -1,3 +1,13 @@
+/**
+ * Converts time to a conversational style.
+ *
+ * @param {Hour} Hour
+ * @param {Minutes} Minutes
+ * @constructor
+ * @example
+ * var clock = new Clock(Hour, Minutes);
+ * var convertedTime = clock.convert(new Date());
+ */
 function Clock (Hour, Minutes) {
     this.hour = new Hour();
     this.minutes = new Minutes();
@@ -19,7 +29,7 @@ Clock.prototype.advanceRawHour = function (rawHour) {
  *
  * @public
  * @param {Date} rawTime
- * @return {string} Converted dat
+ * @returns {string} Converted date
  */
 Clock.prototype.convert = function (rawTime) {
     var convertedHour,

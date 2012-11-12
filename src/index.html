@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Talking clock</h1>
-    <p>Select a time from the dropdown, or use the current time.</p>
+    <p>Enter a time below</p>
     <form>
       <label for="hour">Hour:</label>
       <input id="hour" max="23" min="0" type="number" />
@@ -23,7 +23,7 @@
     <!-- Application JS here - this would be moved into a separate file and refactored -->
     <script>
       (function () {
-        var clock = new Clock(Hours, Minutes),
+        var clock = new Clock(Hour, Minutes),
             submitButton = document.getElementById('submit');
 
         submitButton.addEventListener('click', function (e) {

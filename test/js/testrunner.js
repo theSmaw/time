@@ -1,3 +1,5 @@
+/*3rd party code*/
+
 // Verify arguments
 if (phantom.args.length === 0) {
     console.log("Simple JasmineBDD test runner for phantom.js");
