@@ -16,13 +16,28 @@
     <p id="results">Your time will appear here.</p>
 
     <!-- Scripts would be concatenated on build for deployment -->
-    <script src="js/Clock.js"></script>
     <script src="js/Hours.js"></script>
     <script src="js/Minutes.js"></script>
+    <script src="js/Clock.js"></script>
 
     <!-- Application JS here - this would be moved into a separate file and refactored -->
     <script>
+      (function () {
+        var clock = new Clock(Hours, Minutes),
+            submitButton = document.getElementById('submit');
 
+        submitButton.addEventListener('click', function (e) {
+          var date = new Date();
+
+          e.preventDefault();
+
+          // TODO - validation on form input
+
+          date.setHours(document.getElementById('hour').value);
+          date.setMinutes(document.getElementById('minutes').value);
+          document.getElementById('results').innerText = clock.convert(date);
+        }, false);
+      }());
     </script>
   </body>
 </html>

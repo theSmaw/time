@@ -14,6 +14,13 @@ Clock.prototype.advanceRawHours = function (rawHours) {
     return advancedRawHours;
 };
 
+/**
+ * Converts a Date object into a conversational string.
+ *
+ * @public
+ * @param {Date} rawTime
+ * @return {string} Converted date
+ */
 Clock.prototype.convert = function (rawTime) {
     var prefix,
         rawHours = rawTime.getHours(),

@@ -1,16 +1,17 @@
 var casper = require('casper').create();
 var utils = require('utils');
 
-function convertTime(hours, minutes) {
+function convertTime(hour, minutes) {
 
     return casper.evaluate(function (hour, minutes) {
+
         document.getElementById('hour').value = hour;
         document.getElementById('minutes').value = minutes;
         document.getElementById('submit').click();
 
         return document.getElementById('results').innerText;
     }, {
-        hours : hours,
+        hour : hour,
         minutes : minutes
     });
 }
@@ -63,7 +64,7 @@ casper.then(function () {
 });
 
 casper.then(function () {
-    this.test.assertEquals(convertTime(5, 1), 'five past one', 'should correctly convert 5:01');
+    this.test.assertEquals(convertTime(5, 3), 'five past five', 'should correctly convert 5:03');
 });
 
 casper.then(function () {
@@ -83,11 +84,11 @@ casper.then(function () {
 });
 
 casper.then(function () {
-    this.test.assertEquals(convertTime(8, 36), 'twenty-five minutes to eight', 'should correctly convert 8:36');
+    this.test.assertEquals(convertTime(8, 36), 'twenty-five minutes to nine', 'should correctly convert 8:36');
 });
 
 casper.then(function () {
-    this.test.assertEquals(convertTime(21, 41), 'twenty to nine', 'should correctly convert 21:41');
+    this.test.assertEquals(convertTime(21, 41), 'twenty to ten', 'should correctly convert 21:41');
 });
 
 casper.then(function () {

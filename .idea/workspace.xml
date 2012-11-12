@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="739fcd94-116a-4daf-b725-e7071fc46fa6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/SPEC-index.xml" afterPath="$PROJECT_DIR$/results/SPEC-index.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/index.spec.js" afterPath="$PROJECT_DIR$/spec/index.spec.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/Clock.js" afterPath="$PROJECT_DIR$/src/js/Clock.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/Hours.js" afterPath="$PROJECT_DIR$/src/js/Hours.js" />
     </list>
     <ignored path="time.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +58,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="47" selection-start="484" selection-end="511" vertical-scroll-proportion="-9.375">
+            <state line="43" column="0" selection-start="1389" selection-end="1389" vertical-scroll-proportion="-26.875">
               <folding />
             </state>
           </provider>
@@ -64,7 +67,16 @@
       <file leaf-file-name="Clock.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/Clock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="14" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+            <state line="60" column="0" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hours.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/Hours.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,7 +85,7 @@
       <file leaf-file-name="index.spec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/index.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="47" selection-start="2569" selection-end="2569" vertical-scroll-proportion="0.7679814">
+            <state line="85" column="25" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.7563805">
               <folding />
             </state>
           </provider>
@@ -107,8 +119,10 @@
         <option value="$PROJECT_DIR$/test/Clock.test.js" />
         <option value="$PROJECT_DIR$/src/Clock.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/js/Clock.js" />
+        <option value="$PROJECT_DIR$/src/js/Hours.js" />
         <option value="$PROJECT_DIR$/spec/index.spec.js" />
+        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
@@ -379,23 +393,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
+    <entry file="file://$PROJECT_DIR$/test/js/Clock.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="47" selection-start="484" selection-end="511" vertical-scroll-proportion="-9.375">
+        <state line="65" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.7540603">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/Clock.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="14" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+        <state line="60" column="0" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/Clock.test.js">
+    <entry file="file://$PROJECT_DIR$/src/js/Hours.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.7540603">
+        <state line="30" column="0" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -407,9 +421,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1389" selection-end="1389" vertical-scroll-proportion="-26.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/index.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="47" selection-start="2569" selection-end="2569" vertical-scroll-proportion="0.7679814">
+        <state line="85" column="25" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.7563805">
           <folding />
         </state>
       </provider>
