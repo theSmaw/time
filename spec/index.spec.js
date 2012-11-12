@@ -24,6 +24,10 @@ casper.then(function () {
     this.test.assert(this.exists('#submit'), 'should have a submit button');
 });
 
+casper.then(function () {
+    this.test.assert(this.exists('#results'), 'should have a results button');
+});
+
 casper.run(function () {
     this.test.renderResults(true, 0, 'results/SPEC-index.xml');
 });
