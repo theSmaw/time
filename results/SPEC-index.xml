@@ -1,1 +1,1 @@
-<testsuite><testcase classname="unknown" name="should be on the correct page"></testcase></testsuite>
+<testsuite><testcase classname="unknown" name="should be on the correct page"></testcase><testcase classname="unknown" name="should be on the correct page"></testcase><testcase classname="unknown" name="should have an hour field"><failure type="assert">Subject is strictly true</failure></testcase></testsuite>
