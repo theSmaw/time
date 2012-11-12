@@ -25,7 +25,7 @@ casper.then(function () {
 });
 
 casper.then(function () {
-    this.test.assert(this.exists('#results'), 'should have a results button');
+    this.test.assert(this.exists('#results'), 'should have a results area');
 });
 
 casper.run(function () {
